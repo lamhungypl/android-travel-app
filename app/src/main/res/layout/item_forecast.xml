@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+
+    android:id="@+id/rootView"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.loopeer.shadow.ShadowView
+        android:layout_alignBottom="@id/cardView"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-40dp"
+        android:layout_width="wrap_content"
+        app:cornerRadius="40dp"
+
+        >
+
+        <View
+            android:layout_height="75dp"
+            android:layout_width="75dp" />
+
+    </com.loopeer.shadow.ShadowView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:backgroundTint="#2389EF"
+        android:id="@+id/cardView"
+        android:layout_height="190dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="145dp"
+        app:cardCornerRadius="24dp"
+        tools:backgroundTint="@android:color/holo_orange_dark">
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+
+            <ImageView
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_height="124dp"
+                android:layout_marginEnd="-40dp"
+                android:layout_width="170dp"
+                android:src="@drawable/ic_splash_big_cloud" />
+
+
+            <TextView
+                android:id="@+id/textViewTimeOfDay"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:text="get hour"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                tools:text="12:00" />
+
+            <TextView
+                android:id="@+id/textViewDayOfWeek"
+                android:layout_below="@id/textViewTimeOfDay"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="get day"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="Monday" />
+
+            <ImageView
+                android:id="@+id/imageViewForecastIcon"
+                android:layout_below="@id/textViewDayOfWeek"
+                android:layout_centerHorizontal="true"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:layout_width="56dp"
+                tools:src="@drawable/ic_splash_big_cloud" />
+
+            <TextView
+                android:id="@+id/textViewTemp"
+                android:layout_below="@id/imageViewForecastIcon"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:text="@{viewModel.item.main.getTempString()}"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                tools:text="23°" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTempMaxMin"
+                android:layout_below="@id/textViewTemp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_width="wrap_content"
+                    android:text="get temp"
+                    android:textColor="@color/whiteWithHalfOpacity"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="24°" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_width="wrap_content"
+                    android:text="temp max"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="56°" />
+            </LinearLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

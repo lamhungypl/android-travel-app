@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.endtermandroid.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_destinations"
+        android:name="com.example.endtermandroid.ui.destination.DestinationFragment"
+        android:label="@string/menu_destination"
+        tools:layout="@layout/fragment_destination" />
+
+    <fragment
+        android:id="@+id/nav_my_trips"
+        android:name="com.example.endtermandroid.ui.mytrips.MyTripsFragment"
+        android:label="@string/menu_my_trips"
+        tools:layout="@layout/fragment_my_trips" />
+    <fragment
+        android:id="@+id/nav_utilities"
+        android:name="com.example.endtermandroid.ui.utilities.UtilitiesFragment"
+        android:label="@string/menu_utilities"
+        tools:layout="@layout/fragment_utilities" />
+
+
+    />
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:name="com.example.endtermandroid.ui.about_us.AboutUsFragment"
+        android:label="@string/menu_about_us"
+        tools:layout="@layout/fragment_about_us" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.example.endtermandroid.ui.share.ShareFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/nav_sign_out"
+        android:name="com.example.endtermandroid.ui.sign_out.SignOutFragment"
+        android:label="@string/menu_sign_out"
+        tools:layout="@layout/fragment_sign_out" />
+</navigation>

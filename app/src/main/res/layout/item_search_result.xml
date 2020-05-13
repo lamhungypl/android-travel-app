@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    android:id="@+id/rootView"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/textViewCityName"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:text="@{viewModel.item.getFullName()}"
+        android:textColor="@color/mainTextColor"
+        android:textSize="21sp"
+        tools:text="Çukurova, Adana, Turkey" />
+
+    <View
+        android:background="@color/mainTextColor"
+        android:layout_below="@id/textViewCityName"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent" />
+</RelativeLayout>
